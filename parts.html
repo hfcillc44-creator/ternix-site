@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ternix | Parts</title>
+<meta name="description" content="NDAA-compliant flight controllers, ESCs and GNSS from ARK Electronics, with quote-on-request motors, propellers, batteries and radios, with a certificate of conformance and a country-of-origin statement in every shipment. No minimum order.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230f1720'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial' font-size='30' font-weight='600' fill='%23c9a46a' text-anchor='middle'%3ETx%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d141c;--bg2:#121c26;--line:#24384a;--ink:#e8edf2;--muted:#9aabbb;--dim:#6b7f92;--accent:#c9a46a;--accent2:#7fb3c8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+header{border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:28px;height:28px}
+.brand span{font-weight:500;letter-spacing:.32em;font-size:15px}
+.nav .links{display:flex;gap:24px}
+.nav a.link{color:var(--muted);text-decoration:none;font-size:14px}
+.nav a.link:hover,.nav a.link.on{color:var(--ink)}
+.intro{padding:64px 0 40px;max-width:40em}
+h1{font-weight:300;font-size:clamp(30px,3.8vw,44px);line-height:1.15;letter-spacing:-.01em}
+h1 strong{font-weight:500}
+.lede{color:var(--muted);font-size:18px;margin-top:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-bottom:56px;border-bottom:1px solid var(--line)}
+.part{background:var(--bg2);border:1px solid var(--line);padding:28px}
+.part .maker{color:var(--accent2);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.part h2{font-weight:500;font-size:22px;margin:8px 0 4px}
+.part .sku{color:var(--dim);font-size:13px}
+.part p{color:var(--muted);font-size:15px;margin-top:14px}
+.part ul{list-style:none;margin-top:14px;font-size:15px}
+.part li{padding:6px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px}
+.part li span:last-child{color:var(--ink);text-align:right}
+.price{display:flex;align-items:baseline;justify-content:space-between;margin-top:22px;gap:12px;flex-wrap:wrap}
+.price b{font-weight:500;font-size:26px}
+.price small{color:var(--dim);font-size:13px}
+.buy{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.cta{display:inline-block;padding:11px 20px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-size:15px;transition:background .2s,color .2s}
+.cta:hover{background:var(--accent);color:var(--bg)}
+.cta.solid{background:var(--accent);color:var(--bg)}
+.cta.solid:hover{background:#d9b57c}
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:64px 0;border-bottom:1px solid var(--line)}
+.terms h3{font-weight:500;font-size:17px;margin-bottom:8px}
+.terms p{color:var(--muted);font-size:15px}
+.contact{padding:64px 0;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.contact h2{font-weight:300;font-size:clamp(24px,3vw,30px)}
+.contact p{color:var(--muted);margin-top:16px;line-height:1.9}
+.contact p a{text-decoration:none;border-bottom:1px solid var(--line)}
+.contact p a:hover{border-color:var(--accent)}
+.fine{color:var(--dim);font-size:13px;margin-top:24px;max-width:60em}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--dim);font-size:13px}
+@media (max-width:900px){.grid,.terms{grid-template-columns:1fr}}
+@media (max-width:600px){.wrap{padding:0 16px}}
+.table{width:100%;border-collapse:collapse;font-size:15px;margin-bottom:8px}
+.table th{text-align:left;color:var(--dim);font-weight:400;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:10px 12px;border-bottom:1px solid var(--line)}
+.table td{padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.table td.p{text-align:right;white-space:nowrap;font-weight:500}
+.table td.a{text-align:right;white-space:nowrap}
+.table td.a a{color:var(--accent);text-decoration:none;font-size:14px}
+.table td .d{color:var(--muted);font-size:14px;display:block}
+.tag{display:inline-block;border:1px solid var(--accent2);color:var(--accent2);font-size:11px;letter-spacing:.06em;padding:1px 6px;margin-left:8px;vertical-align:2px}
+.section{padding:48px 0;border-bottom:1px solid var(--line)}
+.section h2{font-weight:400;font-size:24px;margin-bottom:6px}
+.section .sub{color:var(--muted);font-size:15px;margin-bottom:22px}
+.qlist{list-style:none}
+.qlist li{padding:14px 0;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+.qlist li b{color:var(--ink);font-weight:500}
+@media (max-width:700px){.table th:nth-child(2),.table td:nth-child(2){display:none}.table td.a{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Ternix">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" fill="none" stroke="#c9a46a" stroke-width="1.5"/><path d="M8 10h16M16 10v13" stroke="#e8edf2" stroke-width="2" fill="none"/><circle cx="16" cy="23" r="1.6" fill="#c9a46a"/></svg>
+      <span>TERNIX</span>
+    </a>
+    <div class="links"><a class="link on" href="/parts">Parts</a><a class="link" href="/#contact">Contact</a></div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="intro">
+      <h1>Compliant flight electronics, <strong>ready to order, no minimum.</strong></h1>
+      <p class="lede">Every shipment carries a certificate of conformance and a country-of-origin statement for your bill of materials. One order and one invoice can cover parts from several makers.</p>
+    </div>
+
+    <div class="section">
+      <h2>Carried now: ARK Electronics, Salt Lake City, Utah</h2>
+      <p class="sub">Authorized reseller. Unit prices for small lots. All in stock at the maker, shipping in 2 to 3 business days. The rest of the ARK range is available on request. 100 units and up are quoted separately. Shipping at cost.</p>
+      <table class="table">
+        <thead><tr><th>Part</th><th style="text-align:right">Unit price</th><th></th></tr></thead>
+        <tbody>
+        <tr><td>ARK FPV Flight Controller<span class="tag">Blue UAS Framework</span><span class="d">FPV flight controller, built in the USA. PX4, ArduPilot, Betaflight.</span></td><td class="p">$189.00</td><td class="a"><a href="mailto:info@ternixsupply.com?subject=Order%3A%20ARK%20FPV%20Flight%20Controller">Order</a> · <a href="mailto:info@ternixsupply.com?subject=Quote%20100%2B%3A%20ARK%20FPV%20Flight%20Controller">Quote 100+</a></td></tr>
+        <tr><td>ARK FPV 32X Flight Controller<span class="d">FPV flight controller, LSM6DSV32X IMU variant.</span></td><td class="p">$189.00</td><td class="a"><a href="mailto:info@ternixsupply.com?subject=Order%3A%20ARK%20FPV%2032X%20Flight%20Controller">Order</a> · <a href="mailto:info@ternixsupply.com?subject=Quote%20100%2B%3A%20ARK%20FPV%2032X%20Flight%20Controller">Quote 100+</a></td></tr>
+        <tr><td>ARKV6X Flight Controller<span class="tag">Blue UAS Framework</span><span class="d">Pixhawk-standard flight controller.</span></td><td class="p">$389.00</td><td class="a"><a href="mailto:info@ternixsupply.com?subject=Order%3A%20ARKV6X%20Flight%20Controller">Order</a> · <a href="mailto:info@ternixsupply.com?subject=Quote%20100%2B%3A%20ARKV6X%20Flight%20Controller">Quote 100+</a></td></tr>
+        <tr><td>ARKV6S Flight Controller<span class="d">Lower-cost Pixhawk-class flight controller.</span></td><td class="p">$329.00</td><td class="a"><a href="mailto:info@ternixsupply.com?subject=Order%3A%20ARKV6S%20Flight%20Controller">Order</a> · <a href="mailto:info@ternixsupply.com?subject=Quote%20100%2B%3A%20ARKV6S%20Flight%20Controller">Quote 100+</a></td></tr>
+        <tr><td>ARK 4IN1 ESC<span class="tag">Blue UAS Framework</span><span class="d">Four-channel ESC, 3S to 8S, 50 A continuous per motor.</span></td><td class="p">$212.00</td><td class="a"><a href="mailto:info@ternixsupply.com?subject=Order%3A%20ARK%204IN1%20ESC">Order</a> · <a href="mailto:info@ternixsupply.com?subject=Quote%20100%2B%3A%20ARK%204IN1%20ESC">Quote 100+</a></td></tr>
+        <tr><td>ARK 4IN1 ESC CONS<span class="tag">Blue UAS Framework</span><span class="d">Connectorized version of the 4IN1 ESC.</span></td><td class="p">$231.00</td><td class="a"><a href="mailto:info@ternixsupply.com?subject=Order%3A%20ARK%204IN1%20ESC%20CONS">Order</a> · <a href="mailto:info@ternixsupply.com?subject=Quote%20100%2B%3A%20ARK%204IN1%20ESC%20CONS">Quote 100+</a></td></tr>
+        <tr><td>ARK SAM GPS<span class="tag">Blue UAS Framework</span><span class="d">GNSS module.</span></td><td class="p">$75.00</td><td class="a"><a href="mailto:info@ternixsupply.com?subject=Order%3A%20ARK%20SAM%20GPS">Order</a> · <a href="mailto:info@ternixsupply.com?subject=Quote%20100%2B%3A%20ARK%20SAM%20GPS">Quote 100+</a></td></tr>
+        <tr><td>ARK SAM GPS MINI<span class="d">FPV-size GNSS module.</span></td><td class="p">$75.00</td><td class="a"><a href="mailto:info@ternixsupply.com?subject=Order%3A%20ARK%20SAM%20GPS%20MINI">Order</a> · <a href="mailto:info@ternixsupply.com?subject=Quote%20100%2B%3A%20ARK%20SAM%20GPS%20MINI">Quote 100+</a></td></tr>
+        <tr><td>ARK DAN GPS<span class="d">GNSS module.</span></td><td class="p">$139.00</td><td class="a"><a href="mailto:info@ternixsupply.com?subject=Order%3A%20ARK%20DAN%20GPS">Order</a> · <a href="mailto:info@ternixsupply.com?subject=Quote%20100%2B%3A%20ARK%20DAN%20GPS">Quote 100+</a></td></tr>
+        <tr><td>ARK PAB Power Module<span class="d">Power module.</span></td><td class="p">$97.00</td><td class="a"><a href="mailto:info@ternixsupply.com?subject=Order%3A%20ARK%20PAB%20Power%20Module">Order</a> · <a href="mailto:info@ternixsupply.com?subject=Quote%20100%2B%3A%20ARK%20PAB%20Power%20Module">Quote 100+</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Quote on request</h2>
+      <p class="sub">Maker and part number come with each quote.</p>
+      <ul class="qlist">
+        <li><b>Propellers</b>, made in the US, 5 and 10 inch. Standard lead time 4 to 6 weeks.</li>
+        <li><b>Battery packs</b>, assembled in the US, standard and custom, with non-Chinese cell options. Cell country of origin is stated in each quote.</li>
+        <li><b>4-in-1 ESC</b>, 8S 80A, made in Lithuania, with no Chinese components down to the passives.</li>
+        <li><b>Receivers and video transmitters</b>, from an EU maker.</li>
+        <li><b>Motors and FPV cameras</b> are being added next.</li>
+      </ul>
+    </div>
+
+    <div class="terms">
+      <div><h3>Paperwork included</h3><p>A manufacturer's certificate of conformance and a country-of-origin statement ship with every order, serial-numbered where the part is serialized. A supply chain sheet mapped to the Drone Dominance framework is available on request.</p></div>
+      <div><h3>How to pay</h3><p>Card, including government purchase cards, or invoice with ACH. Tax-exempt buyers send their certificate with the order.</p></div>
+      <div><h3>Failed a sourcing review?</h3><p>Send the part number. We'll look for a compliant alternative and come back with options and lead times.</p></div>
+    </div>
+
+    <div class="contact" id="contact">
+      <h2>Send a part number or a quantity.</h2>
+      <p><a href="mailto:info@ternixsupply.com">info@ternixsupply.com</a><br>
+      <a href="tel:+15155990593">(515) 599-0593</a><br>
+      Johnston, Iowa</p>
+    </div>
+    <p class="fine">Ternix Supply LLC is an authorized reseller of ARK Electronics, LLC products. Specifications and Blue UAS Framework statements are the manufacturer's. Prices in USD, exclusive of shipping and any applicable tax, and subject to change with the manufacturer's list.</p>
+  </div>
+</main>
+
+<footer><div class="wrap">© 2026 Ternix Supply LLC</div></footer>
+</body>
+</html>
